@@ -3,6 +3,12 @@ var repoCall
 
 
 function requestData() {
+    var changeClasses = document.getElementById("info").classList
+    if (changeClasses.contains("ajaxReturn")) {
+            document.getElementById("repoReturn").innerHTML = ""
+            changeClasses.remove("ajaxReturn")
+            changeClasses.add("ajaxReturnOut")
+                    }
 
     let user = document.getElementById("searchUser").value
     let user_url = `https://api.github.com/users/${user}`
