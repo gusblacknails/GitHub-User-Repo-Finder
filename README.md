@@ -1,4 +1,4 @@
-# GitHub Searcher made with Vanilla JavaScript, HTML and CSS
+ GitHub Searcher made with Vanilla JavaScript, HTML and CSS
 
 
 

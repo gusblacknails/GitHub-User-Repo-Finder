@@ -13,9 +13,12 @@
         <div class="search_container">
             <div class="searchDiv">
                 <form action="">
-                    <input type="text" id="searchUser" class="userInput" placeholder="Search username..." type="submit">
+                    <input type="text" id="searchUser" class="userInput" placeholder="Search username..." type="" >
                     <button class="searchButton" type="button" onclick="requestData()" value="">Search</button>
                 </form>
+            </div>
+            <div id="errorBox" class="errorOut">
+                <span>Can not find the user you are looking for</span> 
             </div>
             <div id="info" class="ajaxReturnOut">
                 <div class="profileInfo">
@@ -31,11 +34,10 @@
                 <div class="repos">
                     <h3>Repositories</h3>
                 </div>
-                <ul id="repoReturn" class="repoUL" >
-                    
-            </ul>
+                <ul id="repoReturn" class="repoUL">
+                </ul>
+            </div>
         </div>
-    </div>
     </div>
     <script src="js/ajaxCalls.js"></script>
 </body>

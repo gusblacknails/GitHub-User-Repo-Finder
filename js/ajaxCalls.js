@@ -3,12 +3,17 @@ var repoCall
 
 
 function requestData() {
-    var changeClasses = document.getElementById("info").classList
+    let changeClasses = document.getElementById("info").classList
+    let changeErrorClasses = document.getElementById("errorBox").classList
+    if (changeErrorClasses.contains("error")) {
+        changeErrorClasses.remove("error")
+        changeErrorClasses.add("errorOut")
+    }
     if (changeClasses.contains("ajaxReturn")) {
-            document.getElementById("repoReturn").innerHTML = ""
-            changeClasses.remove("ajaxReturn")
-            changeClasses.add("ajaxReturnOut")
-                    }
+        document.getElementById("repoReturn").innerHTML = ""
+        changeClasses.remove("ajaxReturn")
+        changeClasses.add("ajaxReturnOut")
+    }
 
     let user = document.getElementById("searchUser").value
     let user_url = `https://api.github.com/users/${user}`
@@ -71,6 +76,10 @@ function responseRepo() {
         }
 
     } else if (userCall.status == 404) {
-        alert("The Profile you're searching for doesn't exist")
+        let changeErrorClasses = document.getElementById("errorBox").classList
+        if (changeErrorClasses.contains("errorOut")) {
+            changeErrorClasses.remove("errorOut")
+            changeErrorClasses.add("error")
+        }
     }
 }

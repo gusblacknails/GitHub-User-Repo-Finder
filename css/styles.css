@@ -142,3 +142,17 @@ button:focus {
     padding-left: 18%;
     display: none;
 }
+.errorOut{
+    display: none;
+}
+.error{
+    border: 2px;
+    border-color: red;
+    border-style: ridge;
+    background-color: rgba(214, 153, 153, 0.5);
+    padding: 20px;
+    margin-top: 20px;
+}
+.error span{
+    color: red;
+}
