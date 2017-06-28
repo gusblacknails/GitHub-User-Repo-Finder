@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Marfeel FrontEnd Test</title>
+    <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class='container'>
+        <div class="search_container">
+            <div class="searchDiv">
+                <form action="">
+                    <input type="text" id="searchUser" class="userInput" placeholder="Search username..." type="submit">
+                    <button class="searchButton" type="button" onclick="requestData()" value="">Search</button>
+                </form>
+            </div>
+            <div id="info" class="ajaxReturnOut">
+                <div class="profileInfo">
+                    <div class="userInfo">
+                        <img id="avatar" class="profilePhoto" src="" alt="avatar">
+                        <div class="userData">
+                            <span id="login"></span>
+                            <h1 id="fullName"></h1>
+                            <span id="bio"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="repos">
+                    <h3>Repositories</h3>
+                </div>
+                <ul id="repoReturn" class="reposResult">
+                    <li><span>Repo 1</span><span><i class="fa fa-star" aria-hidden="true"></i><span style="padding-right: 4px">50</span><i class="fa fa-code-fork" aria-hidden="true"></i><span>10</span></div>
+            </li>
+            </ul>
+        </div>
+    </div>
+    </div>
+    <script src="js/ajaxCalls.js"></script>
+</body>
+
+</html>
