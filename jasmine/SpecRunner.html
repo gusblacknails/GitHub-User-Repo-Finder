@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Jasmine Spec Runner v2.6.4</title>
+
+  <link rel="shortcut icon" type="image/png" href="lib/jasmine-2.6.4/jasmine_favicon.png">
+  <link rel="stylesheet" href="lib/jasmine-2.6.4/jasmine.css">
+
+  <script src="lib/jasmine-2.6.4/jasmine.js"></script>
+  <script src="lib/jasmine-2.6.4/jasmine-html.js"></script>
+  <script src="lib/jasmine-2.6.4/boot.js"></script>
+  <script src="spec/javascripts/helpers/mock-ajax.js"></script>
+  <script src="spec/javascripts/helpers/testResponse.js"></script>
+  <script src="spec/javascripts/helpers/repoResponse.js"></script>
+  <!-- include source files here... -->
+  <script src="src/ajaxCalls_src.js"></script>
+
+
+  <!-- include spec files here... -->
+  <script src="spec/ajaxCalls_spec.js"></script>
+
+</head>
+
+<body>
+    <div class='container'>
+        <div class="search_container">
+            <div class="searchDiv">
+                <form action="">
+                    <input type="text" id="searchUser" class="userInput" placeholder="Search username..." type="" >
+                    <button class="searchButton" type="button" onclick="requestData()" value="">Search</button>
+                </form>
+            </div>
+            <div id="errorBox" class="errorOut">
+                <span>Can not find the user you are looking for</span> 
+            </div>
+            <div id="info" class="ajaxReturnOut">
+                <div class="profileInfo">
+                    <div class="userInfo">
+                        <img id="avatar" class="profilePhoto" src="" alt="avatar">
+                        <div class="userData">
+                            <span id="login"></span>
+                            <h1 id="fullName"></h1>
+                            <span id="bio"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="repos">
+                    <h3>Repositories</h3>
+                </div>
+                <ul id="repoReturn" class="repoUL">
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
