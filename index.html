@@ -13,7 +13,7 @@
         <div class="search_container">
             <div class="searchDiv">
                 <form action="">
-                    <input type="text" id="searchUser" class="userInput" placeholder="Search username..." type="" >
+                    <input type="text" id="searchUser" class="userInput" placeholder="Search username..." type="" onkeypress="if (event.keyCode==13){ requestData();return false;}">
                     <button class="searchButton" type="button" onclick="requestData()" value="">Search</button>
                 </form>
             </div>
